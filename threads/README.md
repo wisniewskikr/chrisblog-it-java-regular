@@ -15,7 +15,7 @@ And we run this method in many threads.
 You can work with threads in following ways:
 * **anonymous method**: create new Thread with anonymous method;
 * **custom thread class**: create custom Thread which extends class Thread;
-* **custom runnable interface**: create class with implements interface Runnable. This class should be place in Thread;
+* **custom runnable interface**: create class with implements interface Runnable. This class should be placed in constructor of Thread;
 * **executor service**: use ExecutorService class to create pool of Threads.
 
 

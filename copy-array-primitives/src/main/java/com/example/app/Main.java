@@ -18,8 +18,8 @@ public class Main {
 		
 //		arrayCopy = main.getArrayCopyByLoop(array);
 //		arrayCopy = main.getArrayCopyByJson(array);
-		arrayCopy = main.getArrayCopyBySerialization(array);
-//		arrayCopy = main.getArrayCopyByCloneMethod(array);
+//		arrayCopy = main.getArrayCopyBySerialization(array);
+		arrayCopy = main.getArrayCopyByCloneMethod(array);
 //		arrayCopy = main.getArrayCopyByStream(array);
 //		arrayCopy = main.getArrayCopyByArrays(array);
 //		arrayCopy = main.getArrayCopyBySystem(array);
