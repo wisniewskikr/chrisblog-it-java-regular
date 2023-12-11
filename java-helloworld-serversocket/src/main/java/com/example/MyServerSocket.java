@@ -17,6 +17,7 @@ public class MyServerSocket {
     public static void displayHelloWorld() throws IOException {
 
         ServerSocket serverSocket = new ServerSocket(8080);
+        System.out.println("Server is working ...");
 
         while (true) {
 
