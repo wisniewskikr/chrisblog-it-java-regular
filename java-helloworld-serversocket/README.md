@@ -7,7 +7,7 @@ USAGE JAVA
 
 Usage steps:
 1. In a command line tool compile project with `mvn package`
-1. In a command line tool start project with `java -jar target/java-helloworld-httphandler-0.0.1-SNAPSHOT.jar`
+1. In a command line tool start project with `java -jar target/java-helloworld-serversocket-0.0.1-SNAPSHOT.jar`
 1. In a browser visit `http://localhost:8080`
    * Expected page with text **Hello World!**
 1. Clean up environment 
@@ -18,13 +18,13 @@ DESCRIPTION
 -----------
 
 ##### Goal
-The goal of this project is to present how to create an application type **API REST** in **Java** programming language with usage **Http Handler** dependency.
+The goal of this project is to present how to create an application type **API REST** in **Java** programming language with usage **Server Socket** dependency.
 
 ##### Terminology
 Terminology explanation:
 * **Java**: object-oriented programming language
 * **API REST**: an architectural style for an application program interface (API) that uses HTTP requests to access and use data
-* **Http Handler**: a Java dependency/library for communication 
+* **Server Socket**: a Java dependency/library for communication 
 
 ##### Flow
 The following flow takes place in this project:
