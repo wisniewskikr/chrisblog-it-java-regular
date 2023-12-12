@@ -7,9 +7,10 @@ USAGE JAVA
 
 Usage steps:
 1. In a command line tool compile project with `mvn package`
-1. In a command line tool start project with `java -jar target/java-helloworld-httphandler-0.0.1-SNAPSHOT.jar`
-1. In a browser visit `http://localhost:8080`
-   * Expected page with text **Hello World!**
+1. In a command line tool start project with `java -jar target/java-helloworld-functional-interface-0.0.1-SNAPSHOT.jar`
+1. In a command line tool check result:
+   * Expected text **Hello World from Anonymous Method!**
+   * Expected text **Hello World from Lambda!**
 1. Clean up environment 
      * In a command line tool stop application with `ctrl + C`
 
@@ -18,18 +19,16 @@ DESCRIPTION
 -----------
 
 ##### Goal
-The goal of this project is to present how to create an application type **API REST** in **Java** programming language with usage **Http Handler** dependency.
+The goal of this project is to present how to use **Functional Interface** as anonymous method and lambda.
 
 ##### Terminology
 Terminology explanation:
 * **Java**: object-oriented programming language
-* **API REST**: an architectural style for an application program interface (API) that uses HTTP requests to access and use data
-* **Http Handler**: a Java dependency/library for communication 
+* **Functional Interface**: it's interface with only one abstract method
 
 ##### Flow
 The following flow takes place in this project:
-1. User via any browser sends request to application Hello World for the content.
-1. Application HelloWorld sends back response with text.
+1. User via command line tool runs application and receives output
 
 ##### Launch
 To launch this application please make sure that the **Preconditions** are met and then follow instructions from **Usage** section.
