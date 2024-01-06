@@ -1,4 +1,4 @@
-package com.example.app;
+package com.example.app.main;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
