@@ -31,10 +31,7 @@ class Example6CustomCallable implements Callable<String> {
 
 	@Override
 	public String call() throws Exception {
-		CountUtil.count();
-		return null;
-	}
-
-	
+		return CountUtil.count();
+	}	
 	
 }
