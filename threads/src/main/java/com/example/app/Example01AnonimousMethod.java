@@ -2,11 +2,11 @@ package com.example.app;
 
 import com.example.app.utils.CountUtil;
 
-public class Example1AnonimousMethod {
+public class Example01AnonimousMethod {
 
 	public static void main(String[] args) {
 	
-		Example1AnonimousMethod main = new Example1AnonimousMethod();		
+		Example01AnonimousMethod main = new Example01AnonimousMethod();		
 		main.countByAnonimousMethod(2);
 
 		

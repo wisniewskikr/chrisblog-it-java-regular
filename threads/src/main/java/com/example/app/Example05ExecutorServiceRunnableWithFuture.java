@@ -7,11 +7,11 @@ import java.util.concurrent.Future;
 
 import com.example.app.utils.CountUtil;
 
-public class Example5ExecutorServiceRunnableWithFuture {
+public class Example05ExecutorServiceRunnableWithFuture {
 
 	public static void main(String[] args) throws InterruptedException, ExecutionException {
 	
-		Example5ExecutorServiceRunnableWithFuture main = new Example5ExecutorServiceRunnableWithFuture();			
+		Example05ExecutorServiceRunnableWithFuture main = new Example05ExecutorServiceRunnableWithFuture();			
 		main.countByExecutorService(2);
 		
 	}
@@ -20,7 +20,7 @@ public class Example5ExecutorServiceRunnableWithFuture {
 			
 		ExecutorService executorService = Executors.newFixedThreadPool(threadsCount);
 		for (int i = 1; i <= threadsCount; i++) {			
-			Future<?> future = executorService.submit(new Example5CustomRunnable());
+			Future<?> future = executorService.submit(new Example05CustomRunnable());
 			// Please comment this line for getting async againt
 			future.get();			
 		}
@@ -30,7 +30,7 @@ public class Example5ExecutorServiceRunnableWithFuture {
 
 }
 
-class Example5CustomRunnable implements Runnable {
+class Example05CustomRunnable implements Runnable {
 
 	@Override
 	public void run() {

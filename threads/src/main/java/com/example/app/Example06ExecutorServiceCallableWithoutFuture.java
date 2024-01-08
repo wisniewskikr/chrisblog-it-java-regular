@@ -6,11 +6,11 @@ import java.util.concurrent.Executors;
 
 import com.example.app.utils.CountUtil;
 
-public class Example6ExecutorServiceCallableWithoutFuture {
+public class Example06ExecutorServiceCallableWithoutFuture {
 
 	public static void main(String[] args) {
 	
-		Example6ExecutorServiceCallableWithoutFuture main = new Example6ExecutorServiceCallableWithoutFuture();			
+		Example06ExecutorServiceCallableWithoutFuture main = new Example06ExecutorServiceCallableWithoutFuture();			
 		main.countByExecutorService(2);
 		
 	}
@@ -19,7 +19,7 @@ public class Example6ExecutorServiceCallableWithoutFuture {
 			
 		ExecutorService executorService = Executors.newFixedThreadPool(threadsCount);
 		for (int i = 1; i <= threadsCount; i++) {			
-			executorService.submit(new Example6CustomCallable());			
+			executorService.submit(new Example06CustomCallable());			
 		}
 		executorService.shutdown();		
 			
@@ -27,7 +27,7 @@ public class Example6ExecutorServiceCallableWithoutFuture {
 
 }
 
-class Example6CustomCallable implements Callable<String> {
+class Example06CustomCallable implements Callable<String> {
 
 	@Override
 	public String call() throws Exception {

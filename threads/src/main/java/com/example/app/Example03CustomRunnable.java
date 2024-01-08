@@ -2,11 +2,11 @@ package com.example.app;
 
 import com.example.app.utils.CountUtil;
 
-public class Example3CustomRunnable {
+public class Example03CustomRunnable {
 
 	public static void main(String[] args) {
 	
-		Example3CustomRunnable main = new Example3CustomRunnable();		
+		Example03CustomRunnable main = new Example03CustomRunnable();		
 		main.countByCustomRunnable(2);
 		
 	}

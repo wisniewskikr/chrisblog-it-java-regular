@@ -2,11 +2,11 @@ package com.example.app;
 
 import com.example.app.utils.CountUtil;
 
-public class Example2CustomThread {
+public class Example02CustomThread {
 
 	public static void main(String[] args) {
 	
-		Example2CustomThread main = new Example2CustomThread();			
+		Example02CustomThread main = new Example02CustomThread();			
 		main.countByCustomThread(2);
 		
 	}

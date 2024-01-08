@@ -5,11 +5,11 @@ import java.util.concurrent.Executors;
 
 import com.example.app.utils.CountUtil;
 
-public class Example4ExecutorServiceRunnableWithoutFuture {
+public class Example04ExecutorServiceRunnableWithoutFuture {
 
 	public static void main(String[] args) {
 	
-		Example4ExecutorServiceRunnableWithoutFuture main = new Example4ExecutorServiceRunnableWithoutFuture();			
+		Example04ExecutorServiceRunnableWithoutFuture main = new Example04ExecutorServiceRunnableWithoutFuture();			
 		main.countByExecutorService(2);
 		
 	}
@@ -18,7 +18,7 @@ public class Example4ExecutorServiceRunnableWithoutFuture {
 			
 		ExecutorService executorService = Executors.newFixedThreadPool(threadsCount);
 		for (int i = 1; i <= threadsCount; i++) {			
-			executorService.submit(new Example4CustomRunnable());			
+			executorService.submit(new Example04CustomRunnable());			
 		}
 		executorService.shutdown();		
 			
@@ -26,7 +26,7 @@ public class Example4ExecutorServiceRunnableWithoutFuture {
 
 }
 
-class Example4CustomRunnable implements Runnable {
+class Example04CustomRunnable implements Runnable {
 
 	@Override
 	public void run() {
