@@ -1,5 +1,6 @@
 package com.example.app;
 
+import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -26,11 +27,14 @@ public class Example6ExecutorServiceCallableWithoutFuture {
 
 }
 
-class Example6CustomCallable implements Runnable {
+class Example6CustomCallable implements Callable<String> {
 
 	@Override
-	public void run() {
-		CountUtil.count();				
+	public String call() throws Exception {
+		CountUtil.count();
+		return null;
 	}
+
+	
 	
 }
