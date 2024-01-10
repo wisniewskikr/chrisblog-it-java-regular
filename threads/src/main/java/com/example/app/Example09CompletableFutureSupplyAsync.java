@@ -6,11 +6,11 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.function.Supplier;
 
-public class Example10CompletableFutureSupplyAsync {
+public class Example09CompletableFutureSupplyAsync {
 
 	public static void main(String[] args) throws InterruptedException, ExecutionException {
 
-		Example10CompletableFutureSupplyAsync main = new Example10CompletableFutureSupplyAsync();			
+		Example09CompletableFutureSupplyAsync main = new Example09CompletableFutureSupplyAsync();			
 		main.displayResultByCompletabeFuture(2);
 		main.displayResultByCompletableFutureWithExecutorService(2);
 		
@@ -21,7 +21,7 @@ public class Example10CompletableFutureSupplyAsync {
 		CompletableFuture<?>[] array = new CompletableFuture<?>[threadsCount];		
 		
 		for (int i = 1; i <= threadsCount; i++) {
-			array[i - 1] = CompletableFuture.supplyAsync(new Example10CustomSupplier());
+			array[i - 1] = CompletableFuture.supplyAsync(new Example09CustomSupplier());
 		}
 
 		CompletableFuture<Void> combinedFuture = CompletableFuture.allOf(array);
@@ -38,7 +38,7 @@ public class Example10CompletableFutureSupplyAsync {
 		CompletableFuture<?>[] array = new CompletableFuture<?>[threadsCount];		
 		
 		for (int i = 1; i <= threadsCount; i++) {
-			array[i - 1] = CompletableFuture.supplyAsync(new Example10CustomSupplier(), executorService);
+			array[i - 1] = CompletableFuture.supplyAsync(new Example09CustomSupplier(), executorService);
 		}
 
 		CompletableFuture<Void> combinedFuture = CompletableFuture.allOf(array);
@@ -52,7 +52,7 @@ public class Example10CompletableFutureSupplyAsync {
 
 }
 
-class Example10CustomSupplier implements Supplier<String> {
+class Example09CustomSupplier implements Supplier<String> {
 
 	@Override
 	public String get() {
