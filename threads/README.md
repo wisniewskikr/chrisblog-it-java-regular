@@ -36,6 +36,5 @@ TODO
 - Example06ExecutorServiceCallableWithoutFuture
 - Example07ExecutorServiceCallabeWithFuture
 - Example08CompletableFutureRunAsync
-- Example09CompletableFutureRunAsyncThen
-- Example10CompletableFutureSupplyAsync
-- Example11CompletableFutureSupplyAsyncThen
+- Example09CompletableFutureSupplyAsync
+- Example10CompletableFutureSupplyAsyncThen
