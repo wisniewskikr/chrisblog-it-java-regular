@@ -10,11 +10,11 @@ import java.util.function.Supplier;
 
 import com.example.app.utils.CountUtil;
 
-public class Example09CompletableFutureRunAsyncThen {
+public class Example10CompletableFutureSupplyAsyncThen {
 
 	public static void main(String[] args) throws InterruptedException, ExecutionException {
 
-		Example09CompletableFutureRunAsyncThen main = new Example09CompletableFutureRunAsyncThen();			
+		Example10CompletableFutureSupplyAsyncThen main = new Example10CompletableFutureSupplyAsyncThen();			
 		main.displayResultByCompletabeFuture(2);
 		main.displayResultByCompletableFutureWithExecutorService(2);
 		
@@ -26,10 +26,10 @@ public class Example09CompletableFutureRunAsyncThen {
 		
 		for (int i = 1; i <= threadsCount; i++) {
 			array[i - 1] = CompletableFuture
-							.supplyAsync(new Example09CustomSupplier())
-							.thenApply(new Example09CustomFunction())
-							.thenAccept(new Example09CustomConsumer())
-							.thenRun(new Example09CustomRunnable());
+							.supplyAsync(new Example10CustomSupplier())
+							.thenApply(new Example10CustomFunction())
+							.thenAccept(new Example10CustomConsumer())
+							.thenRun(new Example10CustomRunnable());
 							
 		}
 
@@ -48,10 +48,10 @@ public class Example09CompletableFutureRunAsyncThen {
 		
 		for (int i = 1; i <= threadsCount; i++) {
 			array[i - 1] = CompletableFuture
-							.supplyAsync(new Example09CustomSupplier(), executorService)
-							.thenApply(new Example09CustomFunction())
-							.thenAccept(new Example09CustomConsumer())
-							.thenRun(new Example09CustomRunnable());
+							.supplyAsync(new Example10CustomSupplier(), executorService)
+							.thenApply(new Example10CustomFunction())
+							.thenAccept(new Example10CustomConsumer())
+							.thenRun(new Example10CustomRunnable());
 		}
 
 		CompletableFuture<Void> combinedFuture = CompletableFuture.allOf(array);
@@ -64,7 +64,7 @@ public class Example09CompletableFutureRunAsyncThen {
 
 }
 
-class Example09CustomSupplier implements Supplier<String> {
+class Example10CustomSupplier implements Supplier<String> {
 
 	@Override
 	public String get() {
@@ -73,7 +73,7 @@ class Example09CustomSupplier implements Supplier<String> {
 
 }
 
-class Example09CustomFunction implements Function<String, String> {
+class Example10CustomFunction implements Function<String, String> {
 
 	@Override
 	public String apply(String t) {
@@ -82,7 +82,7 @@ class Example09CustomFunction implements Function<String, String> {
 
 }
 
-class Example09CustomConsumer implements Consumer<String> {
+class Example10CustomConsumer implements Consumer<String> {
 
 	@Override
 	public void accept(String t) {
@@ -91,7 +91,7 @@ class Example09CustomConsumer implements Consumer<String> {
 
 }
 
-class Example09CustomRunnable implements Runnable {
+class Example10CustomRunnable implements Runnable {
 
 	@Override
 	public void run() {
