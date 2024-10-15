@@ -1,18 +1,10 @@
-## Getting Started
+## Goal
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Goal of this project is to create application which will sort elements in array using Bubble Sort. It means that in first iteration last element is set, then one before last etc.
 
-## Folder Structure
-
-The workspace contains two folders by default, where:
-
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+##### Hint
+Hints:
+* Use two loops
+* Use tmp variable to replace two elements
+* Always higher value should be second
+* Use boolean "swapped" if there was some change during iteration. If false then you can finish iteration - array was sorted.
