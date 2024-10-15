@@ -4,6 +4,12 @@ public class App {
 
     private static void bubbleSortAsc(int[] array) {
 
+        if (array == null) 
+            throw new IllegalArgumentException("Array can not be null");
+
+        if (array.length == 0)
+            return;
+
         int end = array.length;
         int tmp;
         boolean swapped;
