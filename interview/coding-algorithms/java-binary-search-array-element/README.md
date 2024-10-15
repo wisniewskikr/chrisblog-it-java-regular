@@ -1,18 +1,10 @@
-## Getting Started
+## Goal
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Goal of this project is to create application which will find index of the element in the array using **Binary Search**. Binary Search means that array has to be sorted and then we check in the middle. If value is lower then middle then we check in the middle of left side. If value is higher then the middle the we check in the middle of right side.
 
-## Folder Structure
-
-The workspace contains two folders by default, where:
-
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+##### Hints
+Hints:
+* Array has to be sorted
+* We need 3 variables: right, left, middle
+* We have to use the loop "while"
+* We have to narrow results until we find our target or return -1
