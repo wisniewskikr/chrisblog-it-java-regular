@@ -1,7 +1,7 @@
 ## Goal
 
-Goal of this project is to create application which will check if specific number is prime or not. Prime means that this number can be divided by 1 ond themself. For instance: 2, 3, 5, 7, 11, 13, 17.
+Goal of this project is to create application which calculate Greatest Common Divisor (GCD) for two numbers. GCD is the greatest number which divides argument numbers without any rest. 
 
 ##### Hints
 Hints:
-* For better performance iterate only to half of number - result will be the same
+* Iterate decreasing from smallest number
