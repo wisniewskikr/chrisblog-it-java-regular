@@ -2,13 +2,14 @@ public class App {
 
     public static void main(String[] args) {
 
-        Pizza pizza = new Pizza.PizzaBuilder("Large")
-                .cheese(true)
-                .pepperoni(true)
-                .mushrooms(false)
-                .build();
+        Greeting greeting = new Greeting.GreetingBuilder()
+            .addWord("Hello")
+            .addSpace()
+            .addWord("World")
+            .addExclamationMark()
+            .build();
 
-        System.out.println(pizza);
+        System.out.println(greeting.getMessage());
         
     }
 }

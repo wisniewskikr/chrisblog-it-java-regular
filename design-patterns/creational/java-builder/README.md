@@ -9,8 +9,8 @@ Goal of this project is to create **Builder** creational design pattern.
 ## Hints
 
 Hints:
-* Create main class Pizza
-* Create inner class Builder 
-* Class Builder should have methods which returns Builder
-* Class Pizza should have private contructor with Builder as an argument
-* Method Builder.build() should call private argument of Pizza
+* Create main class Greeting
+* Create public inner class GreetingBuilder 
+* Class GreetingBuilder should have methods which do some action and return GreetingBuilder
+* Class Greeting should have private contructor with GreetingBuilder as an argument. Some action should be done here
+* Method GreetingBuilder.build() should call private constructor of Greeting
