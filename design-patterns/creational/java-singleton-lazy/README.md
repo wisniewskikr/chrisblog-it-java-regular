@@ -1,6 +1,6 @@
 ## Goal
 
-Goal of this project is to create **Singleton** creational design pattern type **eager**.  
+Goal of this project is to create **Singleton** creational design pattern type **lazy**.  
 
 ## Explanetion
 
