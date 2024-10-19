@@ -4,12 +4,11 @@ Goal of this project is to create multiple thread example with usage **ExecutorS
 
 ## Explanation
 
-**CompletableFuture.get()** method starts threads and **CompletableFuture.join()** waits for all results.
+**CompletableFuture.runAsync()** method starts threads and **CompletableFuture.join()** waits for all results.
 
 ## Hints
 
 Hints:
 * Create ExecutorService using Executors helper class
-* Get CompletableFuture<Void> using ExecutorService as an argument
-* Call ComletableFuture.get()
+* Call CompletableFuture.runAsync() and get CompletableFuture<Void> using ExecutorService as an argument
 * Call ComletableFuture.allOf() and ComletableFuture.join()
