@@ -1,6 +1,6 @@
 ## Goal
 
-Goal of this project is to create **Visitor** behavioral design pattern. It should be used if you want to add some new functionality without changing code. This new functionality is in Visitor.
+Goal of this project is to create **Visitor** behavioral design pattern. It should be used if you want to add some new functionality to many existing elements without changing their code. This new functionality is in Visitor.
 
 ## Explanation
 
