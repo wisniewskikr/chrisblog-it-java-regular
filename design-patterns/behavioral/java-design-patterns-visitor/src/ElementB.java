@@ -6,7 +6,7 @@ class ElementB implements Element {
         visitor.visit(this);
     }
 
-    public String helloB() {
-        return "Hello from ElementB!";
+    public String getName() {
+        return "ElementB";
     }
 }
