@@ -9,6 +9,6 @@ Goal of this project is to create **State** behavioral design pattern.
 ## Hints
 
 Hints:
-* Create interface TrafficLight
-* Create classes GreenState, YellowState and ReedState which implement interface TrafficLight
-* Create class TrafficLightContext with TrafficLight as constructor and setter. This GreetingContext has method greet() which returns different results every time
+* Create interface GreetingState with greeting() method which takes as argument GreetingContext
+* Create classes HelloGreeting and Goodbay which implement interface GreetingState. They should display greeting and change state of context
+* Create class GreetingContext with GreetingState as constructor and setter. This GreetingContext has method greet() which returns different results every time - it's done automatically
