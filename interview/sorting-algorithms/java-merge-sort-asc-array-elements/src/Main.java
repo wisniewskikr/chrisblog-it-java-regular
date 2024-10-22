@@ -1,20 +1,23 @@
-import java.util.Arrays;
-
 public class Main {
     
     public static void main(String[] args) {
         
-        int[] array = {4, 2, 5, 9, 8, 3};                           // Input
+        int[] array = {3, 1, 6, 4, 7, 9};           // Input
 
-        mergeSort(array);                                           // Process
+        mergeSort(array);                           // Process
 
-        System.out.println("Result: " + Arrays.toString(array));    // Output: [2, 3, 4, 5, 8, 9]
+        for (int i : array) {                       // Output: 1, 3, 4, 6, 7, 9
+            System.out.print(i + " ");
+        }
 
     }
 
     private static void mergeSort(int[] array) {
+
+        if (array == null || array.length == 0)
+            return;
         
-        int length = array.length;
+        int length = array.length;        
 
         if (length <= 1)
             return;
@@ -22,17 +25,18 @@ public class Main {
         int mid = length / 2;
         int[] leftArray = new int[mid];
         int[] rightArray = new int[length - mid];
-        int l = 0;
-        int r = 0;
+        int i = 0, l = 0, r = 0;
 
-        for (int index = 0; index < length; index++) {
+        while (i < length) {
             
-            if (index < mid) {
-                leftArray[l] = array[index];
+            if (i < mid) {
+                leftArray[l] = array[i];
                 l++;
+                i++;
             } else {
-                rightArray[r] = array[index];
+                rightArray[r] = array[i];
                 r++;
+                i++;
             }
 
         }
@@ -44,12 +48,12 @@ public class Main {
     }
 
     private static void merge(int[] array, int[] leftArray, int[] rightArray) {
-
-        int leftSize = leftArray.length;
-        int rightSize = rightArray.length;
+        
+        int leftLength = leftArray.length;
+        int rightLength = rightArray.length;
         int i = 0, l = 0, r = 0;
 
-        while (l < leftSize && r < rightSize) {
+        while (l < leftLength && r < rightLength) {
 
             if (leftArray[l] < rightArray[r]) {
                 array[i] = leftArray[l];
@@ -63,13 +67,13 @@ public class Main {
             
         }
 
-        while (l < leftSize) {
+        while (l < leftLength) {
             array[i] = leftArray[l];
             i++;
             l++;
         }
 
-        while (r < rightSize) {
+        while (r < rightLength) {
             array[i] = rightArray[r];
             i++;
             r++;

@@ -9,6 +9,8 @@ Info:
 
 ##### Hints
 Hints:
+* Use variables lenght, i, r, l
+* Use while loop in both methods to fill with data
 * Use mergeSort(array) to divide array in leftArray and rightArray
 * Use merge(arrayLeft, arrayRight) to merge arrays
 
