@@ -4,11 +4,11 @@ public class Main {
     
     public static void main(String[] args) {
         
-        int[] array = {3, 1, 6, 4, 7, 9};               // Input
+        int[] array = {3, 1, 0, 4, 2, 7, 6, 9, 8, 5};               // Input
 
-        quickSort(array, 0, array.length - 1);    // Process
+        quickSort(array, 0, array.length - 1);                // Process
 
-        for (int i : array) {                           // Output: 1, 3, 4, 6, 7, 9
+        for (int i : array) {                                       // Output: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9
             System.out.print(i + " ");
         }
 
@@ -33,7 +33,7 @@ public class Main {
         int i = start - 1;
         int pivot = array[end];
 
-        for (int j = 0; j < end - 1; j++) {
+        for (int j = start; j <= end - 1; j++) {
             
             if (array[j] < pivot) {
                 i++;
