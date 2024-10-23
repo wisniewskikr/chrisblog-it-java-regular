@@ -1,12 +1,14 @@
+
+
 public class Main {
     
     public static void main(String[] args) {
         
-        int[] array = {3, 1, 6, 4, 7, 9};           // Input
+        int[] array = {3, 1, 6, 4, 9, 7};               // Input
 
-        mergeSort(array);                           // Process
+        mergeSort(array);                               // Process
 
-        for (int i : array) {                       // Output: 1, 3, 4, 6, 7, 9
+        for (int i : array) {                           // Output: 1, 3, 4, 6, 7, 9
             System.out.print(i + " ");
         }
 
@@ -16,18 +18,18 @@ public class Main {
 
         if (array == null || array.length == 0)
             return;
-        
-        int length = array.length;        
 
-        if (length <= 1)
-            return;
-
-        int mid = length / 2;
-        int[] leftArray = new int[mid];
-        int[] rightArray = new int[length - mid];
+        int size = array.length;
         int i = 0, l = 0, r = 0;
 
-        while (i < length) {
+        if (size <= 1)
+            return;
+
+        int mid = size / 2;
+        int[] leftArray = new int[mid];
+        int[] rightArray = new int[size - mid];
+
+        while (i < size) {
             
             if (i < mid) {
                 leftArray[l] = array[i];
@@ -44,17 +46,17 @@ public class Main {
         mergeSort(leftArray);
         mergeSort(rightArray);
         merge(array, leftArray, rightArray);
-
+        
     }
 
     private static void merge(int[] array, int[] leftArray, int[] rightArray) {
-        
-        int leftLength = leftArray.length;
-        int rightLength = rightArray.length;
+
+        int sizeLeft = leftArray.length;
+        int sizeRight = rightArray.length;
         int i = 0, l = 0, r = 0;
 
-        while (l < leftLength && r < rightLength) {
-
+        while (l < sizeLeft && r < sizeRight) {
+            
             if (leftArray[l] < rightArray[r]) {
                 array[i] = leftArray[l];
                 i++;
@@ -64,21 +66,21 @@ public class Main {
                 i++;
                 r++;
             }
-            
+
         }
 
-        while (l < leftLength) {
+        while (l < sizeLeft) {       
             array[i] = leftArray[l];
             i++;
             l++;
         }
 
-        while (r < rightLength) {
+        while (r < sizeRight) {
             array[i] = rightArray[r];
             i++;
             r++;
         }
-
+        
     }
 
 }
