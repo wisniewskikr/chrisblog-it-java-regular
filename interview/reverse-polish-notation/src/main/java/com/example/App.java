@@ -1,9 +1,10 @@
 package com.example;
 
-import java.util.Stack;
+import java.util.ArrayDeque;
+import java.util.Deque;
 
-public class App 
-{
+public class App {
+
     public static void main( String[] args ) {
         
         // String[] input = {"2", "4", "+"};                        // Input
@@ -24,7 +25,7 @@ public class App
             throw new IllegalArgumentException("Input can not be null.");
         }
 
-        Stack<String> stack = new Stack<>();
+        Deque<String> stack = new ArrayDeque<>();
         int first = 0;
         int second = 0;
         int result = 0;
