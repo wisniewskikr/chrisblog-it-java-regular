@@ -9,10 +9,9 @@ Binary Search info:
 
 ##### Hints
 Hints:
-* Array has to be sorted
-* We need 3 variables: right, left, middle
-* We have to use the loop "while"
-* We have to narrow results until we find our target or return -1
+* Array has to be sorted in advance
+* Use WHILE loop
+* Use variables: left, right, mid
 
 ##### Complexity
 
