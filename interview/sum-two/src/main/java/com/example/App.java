@@ -16,7 +16,7 @@ public class App
 
     }
 
-    private static int[] calculateSumTwo(int[] array, int target) {
+    public static int[] calculateSumTwo(int[] array, int target) {
         
         if (array == null)
             throw new IllegalArgumentException("Array can not be null");

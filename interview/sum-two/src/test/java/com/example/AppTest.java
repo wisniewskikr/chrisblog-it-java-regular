@@ -1,20 +1,23 @@
 package com.example;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-/**
- * Unit test for simple App.
- */
+
 public class AppTest 
 {
-    /**
-     * Rigorous Test :-)
-     */
+    
     @Test
-    public void shouldAnswerWithTrue()
-    {
-        assertTrue( true );
+    public void shouldAnswerWith1And4() {
+
+        int[] array = {2, 4, 7, 6, 8};                              // Given
+        int target = 12; 
+
+        int[] result = App.calculateSumTwo(array, target);           // When
+
+        assertEquals(1, result[0]);                         // Then
+        assertEquals(4, result[1]);
+
     }
 }
