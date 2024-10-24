@@ -10,9 +10,9 @@ Info:
 
 ##### Hints
 Hints:
-* Use methods quickSort(array, start, end) and partition(array, start, end)
-* Use variables pivot, i, j
-* Use swapping with temp variable
+* Use FOR loop
+* Use swapping
+* Use pivot, start and end variables
 
 ##### Complexity
 
