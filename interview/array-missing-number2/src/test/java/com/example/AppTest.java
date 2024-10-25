@@ -1,20 +1,19 @@
 package com.example;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-/**
- * Unit test for simple App.
- */
-public class AppTest 
-{
-    /**
-     * Rigorous Test :-)
-     */
+public class AppTest {
+
     @Test
-    public void shouldAnswerWithTrue()
-    {
-        assertTrue( true );
+    public void shouldAnswerWith3() {
+
+        int[] array = {1, 2, 4, 5, 6};                  // Given
+
+        int result = App.missingNumber(array);          // When
+
+        assertEquals(3, result);               // Then
+
     }
 }
