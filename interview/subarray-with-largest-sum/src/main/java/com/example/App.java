@@ -4,9 +4,9 @@ public class App {
 
     public static void main( String[] args ) {
 
-        // int[] input = {-2, 1, -3, 4, -1, 2, 1, -5, 4};          // Input
+        int[] input = {-2, 1, -3, 4, -1, 2, 1, -5, 4};          // Input
         // int[] input = {1, 2, 3, 4, 5};
-        int[] input = {-1, -2, -3, -4, -5};
+        // int[] input = {-1, -2, -3, -4, -5};
 
         int[] result = largestSumArray(input);                  // Calculation
 
