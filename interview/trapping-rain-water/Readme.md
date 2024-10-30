@@ -1,0 +1,1 @@
+Given an array of non-negative integers representing the elevation map where the width of each bar is 1, the goal is to compute how much water can be trapped between the bars after it rains.
