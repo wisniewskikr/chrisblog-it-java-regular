@@ -7,7 +7,7 @@ public class App {
         int[] input = {3, 1, 5, 4, 9, 6};                            // Input
         int largest = 2;
 
-        int result = findLargestElement(input, largest);
+        int result = findLargestElement(input, largest);             // Calculation 
 
         if (result == -1) {
             System.out.println("Largest element not found");
