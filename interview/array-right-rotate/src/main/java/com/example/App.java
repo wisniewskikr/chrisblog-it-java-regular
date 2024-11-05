@@ -4,18 +4,18 @@ public class App {
 
     public static void main( String[] args ) {
 
-        int[] input = {1, 2, 3};                // Input
-        int rotate = 4;
+        int[] input = {1, 2, 3};                        // Input
+        int rotate = 2;
 
-        int[] result = rightRotate(input, rotate);
+        int[] result = rightRotate(input, rotate);      // Calculation
         
-        for (int i : result) {                   // Output: 3, 1, 2
+        for (int i : result) {                          // Output: 2, 3, 1
             System.out.print(i + " ");
         }
         
     }
 
-    private static int[] rightRotate(int[] input, int rotate) {
+    public static int[] rightRotate(int[] input, int rotate) {
 
         if (rotate == input.length)
             return input;
@@ -24,11 +24,11 @@ public class App {
             rotate = rotate % input.length;
         
         int[] result = new int[input.length];
-        int size = input.length - 1; 
-        int mid = size - rotate;     
+        int size = input.length - 1; // 6
+        int mid = size - rotate;     // 3
         int index = 0;
 
-        for (int i = size; i > mid; i--) {
+        for (int i = mid + 1; i <= size; i++) {
             result[index] = input[i];
             index++; 
         }
