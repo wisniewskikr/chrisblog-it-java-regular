@@ -1,0 +1,1 @@
+Given an array nums of size n, return an array output such that output[i] is equal to the product of all the elements of nums except nums[i]. Product means multiple.
