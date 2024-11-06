@@ -14,7 +14,7 @@ public class App {
 
     }
 
-    private static int[] multipleExceptSelf(int[] input) {
+    public static int[] multipleExceptSelf(int[] input) {
 
         if (input == null || input.length == 0)
             throw new IllegalArgumentException("Input can not be null");
