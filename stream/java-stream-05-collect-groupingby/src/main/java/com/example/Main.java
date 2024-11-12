@@ -12,7 +12,7 @@ public class Main {
 
         List<Message> messages = getMessages();
 
-        Map<Long, String> results = toMapExample(messages);
+        Map<String, List<Message>> results = groupingByExample(messages);
 
         System.out.println(results);
         
@@ -31,9 +31,9 @@ public class Main {
 
     }
 
-    public static Map<Long, String> toMapExample(List<Message> messages) {
+    public static Map<String, List<Message>> groupingByExample(List<Message> messages) {
 
-        Map<Long, String> results = messages.stream().collect(Collectors.toMap(Message::getId, Message::getText));
+        Map<String, List<Message>> results = messages.stream().collect(Collectors.groupingBy(Message::getLanguage));
         return results;
 
     }
