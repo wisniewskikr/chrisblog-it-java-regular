@@ -10,13 +10,13 @@ import org.junit.Test;
 public class MainTest {
 
     @Test
-    public void testToSetExample() {
+    public void testGroupingByExample() {
 
-        // List<Message> messages = Main.getMessages();                    // Given
+        List<Message> messages = Main.getMessages();                                    // Given
 
-        // Map<Long, String> results = Main.toMapExample(messages);        // When
+        Map<String, List<Message>> results = Main.groupingByExample(messages);          // When
 
-        // assertEquals(messages.size(), results.size());                  // Then
+        assertEquals(2, results.size());                                       // Then
 
     }
 
