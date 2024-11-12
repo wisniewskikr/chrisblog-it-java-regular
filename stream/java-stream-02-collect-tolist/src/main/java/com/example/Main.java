@@ -3,17 +3,21 @@ package com.example;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
-public class ForEachNoStream {
+public class Main {
     
     public static void main( String[] args ) {
 
         List<Message> messages = getMessages();
-        messages.forEach(System.out::println);
+
+        List<Message> results = runExample(messages);
+
+        results.forEach(System.out::println);
         
     }
 
-    private static List<Message> getMessages() {
+    public static List<Message> getMessages() {
 
         List<Message> messages = new ArrayList<>();
 
@@ -23,6 +27,13 @@ public class ForEachNoStream {
         messages.add(new Message(4L, "Dzien Dobry", "PL", Arrays.asList(new User(1L, "John"), new User(3L, "Paul"))));
 
         return messages;
+
+    }
+
+    public static List<Message> runExample(List<Message> messages) {
+
+        List<Message> results = messages.stream().collect(Collectors.toList());
+        return results;
 
     }
 
