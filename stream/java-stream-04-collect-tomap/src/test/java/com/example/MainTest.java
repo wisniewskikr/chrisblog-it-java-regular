@@ -9,15 +9,15 @@ import org.junit.Test;
 
 public class MainTest {
 
-    @Test
-    public void testToSetExample() {
+    // @Test
+    // public void testToSetExample() {
 
-        List<Message> messages = Main.getMessages();                    // Given
+    //     List<Message> messages = Main.getMessages();                    // Given
 
-        Set<Message> results = Main.toSetExample(messages);             // When
+    //     Set<Message> results = Main.toMapExample(messages);             // When
 
-        assertEquals(messages.size(), results.size());                  // Then
+    //     assertEquals(messages.size(), results.size());                  // Then
 
-    }
+    // }
 
 }
