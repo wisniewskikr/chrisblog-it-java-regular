@@ -1,15 +1,15 @@
 ##### Goal
 
-In Java, **Stream.forEach()** is a terminal operation used to iterate over each element in a stream, applying a specified action (like printing or modifying) to each element. It’s often used in functional programming contexts to process elements without modifying the original collection directly.
+In Java, **Stream.collect(Collectors.toList())** is used to gather elements of a stream into a List.
 
 ##### Predicate
 
-Consumer; void accept(T)
+N/A
 
 ##### Result
 
-Void
+List
 
 ##### Description
 
-Stream.forEach() is like "SELECT *" for databases.
+Stream.collect(Collectors.toList()) is like "SELECT *" for databases.
