@@ -1,6 +1,6 @@
 ##### Goal
 
-In Java, **Stream.collect(Collectors.toSet())** is used to gather elements of a stream into a Set.
+In Java, **Stream.collect(Collectors.toMap())** is used to gather elements of a stream into a Map.
 
 ##### Predicate
 
@@ -8,8 +8,8 @@ N/A
 
 ##### Result
 
-Set
+Map
 
 ##### Description
 
-Stream.collect(Collectors.toSet()) is like "SELECT *" for databases.
+Stream.collect(Collectors.toMap()) is like "SELECT key, value" for databases.
