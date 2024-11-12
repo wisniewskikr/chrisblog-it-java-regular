@@ -11,7 +11,7 @@ public class Main {
 
         List<Message> messages = getMessages();
 
-        List<Message> results = runExample(messages);
+        List<Message> results = toListExample(messages);
 
         results.forEach(System.out::println);
         
@@ -30,7 +30,7 @@ public class Main {
 
     }
 
-    public static List<Message> runExample(List<Message> messages) {
+    public static List<Message> toListExample(List<Message> messages) {
 
         List<Message> results = messages.stream().collect(Collectors.toList());
         return results;
