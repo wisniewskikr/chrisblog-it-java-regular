@@ -3,21 +3,21 @@ package com.example;
 import static org.junit.Assert.assertEquals;
 
 import java.util.List;
-import java.util.Set;
+import java.util.Map;
 
 import org.junit.Test;
 
 public class MainTest {
 
-    // @Test
-    // public void testToSetExample() {
+    @Test
+    public void testToSetExample() {
 
-    //     List<Message> messages = Main.getMessages();                    // Given
+        List<Message> messages = Main.getMessages();                    // Given
 
-    //     Set<Message> results = Main.toMapExample(messages);             // When
+        Map<Long, String> results = Main.toMapExample(messages);        // When
 
-    //     assertEquals(messages.size(), results.size());                  // Then
+        assertEquals(messages.size(), results.size());                  // Then
 
-    // }
+    }
 
 }
