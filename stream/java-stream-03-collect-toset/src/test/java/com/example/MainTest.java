@@ -3,19 +3,20 @@ package com.example;
 import static org.junit.Assert.assertEquals;
 
 import java.util.List;
+import java.util.Set;
 
 import org.junit.Test;
 
 public class MainTest {
 
     @Test
-    public void testToListExample() {
+    public void testToSetExample() {
 
         List<Message> messages = Main.getMessages();                    // Given
 
-        List<Message> results = Main.toListExample(messages);           // When
+        Set<Message> results = Main.toSetExample(messages);             // When
 
-        assertEquals(messages, results);                                // Then
+        assertEquals(messages.size(), results.size());                  // Then
 
     }
 

@@ -3,6 +3,7 @@ package com.example;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 public class Main {
@@ -11,7 +12,7 @@ public class Main {
 
         List<Message> messages = getMessages();
 
-        List<Message> results = toListExample(messages);
+        Set<Message> results = toSetExample(messages);
 
         results.forEach(System.out::println);
         
@@ -30,9 +31,9 @@ public class Main {
 
     }
 
-    public static List<Message> toListExample(List<Message> messages) {
+    public static Set<Message> toSetExample(List<Message> messages) {
 
-        List<Message> results = messages.stream().collect(Collectors.toList());
+        Set<Message> results = messages.stream().collect(Collectors.toSet());
         return results;
 
     }
