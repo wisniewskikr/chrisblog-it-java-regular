@@ -1,6 +1,6 @@
 ##### Goal
 
-In Java, **Stream.collect(Collectors.toMap())** is used to gather elements of a stream into a Map.
+In Java, the **Collectors.groupingBy** function is used with Java Streams to group elements of a collection based on a specified classifier function. This classifier function determines the "grouping key," which is typically an attribute of each element. The result is a Map where each key is associated with a list of elements that share that key.
 
 ##### Predicate
 
@@ -12,4 +12,4 @@ Map
 
 ##### Description
 
-Stream.collect(Collectors.toMap()) is like "SELECT key, value" for databases.
+Collectors.groupingBy is like "GROUP BY" for databases.
