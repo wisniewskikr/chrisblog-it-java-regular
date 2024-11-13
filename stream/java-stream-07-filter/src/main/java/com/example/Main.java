@@ -3,6 +3,7 @@ package com.example;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Main {
     
@@ -10,9 +11,9 @@ public class Main {
 
         List<Message> messages = getMessages();
 
-        Message[] results = toArrayExample(messages);
+        List<Message> results = filterExample(messages);
 
-        System.out.println(Arrays.toString(results));
+        results.forEach(System.out::println);
         
     }
 
@@ -29,9 +30,11 @@ public class Main {
 
     }
 
-    public static Message[] toArrayExample(List<Message> messages) {
+    public static List<Message> filterExample(List<Message> messages) {
 
-        Message[] results = messages.stream().toArray(Message[]::new);
+        List<Message> results = messages.stream()
+            .filter(m -> "EN".equals(m.getLanguage()))
+            .collect(Collectors.toList());
         return results;
 
     }
