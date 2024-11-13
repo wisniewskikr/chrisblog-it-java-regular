@@ -1,15 +1,15 @@
 ##### Goal
 
-In Java, the **toArray()** method in streams collects elements from a stream and stores them in an array. It is typically used with a lambda to specify the array type.
+In Java, the **stream().filter()** method is used to produce a new stream containing only the elements that match a specified condition (predicate). 
 
-##### Predicate
+##### Functional Interface
 
-N/A
+Predicate, boolean test(T)
 
 ##### Result
 
-Array
+true/false
 
 ##### Description
 
-Stream.toArray() is like "SELECT *" for databases.
+Stream().filter() is like "WHERE" for databases.
