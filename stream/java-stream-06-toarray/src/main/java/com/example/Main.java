@@ -3,8 +3,6 @@ package com.example;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Map;
-import java.util.stream.Collectors;
 
 public class Main {
     
@@ -12,9 +10,9 @@ public class Main {
 
         List<Message> messages = getMessages();
 
-        Map<String, List<Message>> results = groupingByExample(messages);
+        Message[] results = toArrayExample(messages);
 
-        System.out.println(results);
+        System.out.println(Arrays.toString(results));
         
     }
 
@@ -31,9 +29,9 @@ public class Main {
 
     }
 
-    public static Map<String, List<Message>> groupingByExample(List<Message> messages) {
+    public static Message[] toArrayExample(List<Message> messages) {
 
-        Map<String, List<Message>> results = messages.stream().collect(Collectors.groupingBy(Message::getLanguage));
+        Message[] results = messages.stream().toArray(Message[]::new);
         return results;
 
     }
