@@ -11,7 +11,7 @@ public class Main {
 
         List<Message> messages = getMessages();
 
-        List<Message> results = filterExample(messages);
+        List<String> results = mapExample(messages);
 
         results.forEach(System.out::println);
         
@@ -30,10 +30,10 @@ public class Main {
 
     }
 
-    public static List<Message> filterExample(List<Message> messages) {
+    public static List<String> mapExample(List<Message> messages) {
 
-        List<Message> results = messages.stream()
-            .filter(m -> "EN".equals(m.getLanguage()))
+        List<String> results = messages.stream()
+            .map(m -> m.getText())
             .collect(Collectors.toList());
         return results;
 
