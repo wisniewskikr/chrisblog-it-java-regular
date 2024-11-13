@@ -1,6 +1,6 @@
 ##### Goal
 
-In Java, the **Collectors.groupingBy** function is used with Java Streams to group elements of a collection based on a specified classifier function. This classifier function determines the "grouping key," which is typically an attribute of each element. The result is a Map where each key is associated with a list of elements that share that key.
+In Java, the **toArray()** method in streams collects elements from a stream and stores them in an array. It is typically used with a lambda to specify the array type.
 
 ##### Predicate
 
@@ -8,8 +8,8 @@ N/A
 
 ##### Result
 
-Map
+Array
 
 ##### Description
 
-Collectors.groupingBy is like "GROUP BY" for databases.
+Stream.toArray() is like "SELECT *" for databases.
