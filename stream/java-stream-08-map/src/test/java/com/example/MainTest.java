@@ -9,11 +9,11 @@ public class MainTest {
     @Test
     public void testFilterExample() {
 
-        // List<Message> messages = Main.getMessages();                                    // Given
+        List<Message> messages = Main.getMessages();                                    // Given
 
-        // List<Message> results = Main.filterExample(messages);                           // When
+        List<String> results = Main.mapExample(messages);                               // When
 
-        // assertEquals(2, results.size());                                       // Then
+        assertEquals(4, results.size());                                       // Then
 
     }
 
