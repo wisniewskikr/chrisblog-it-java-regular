@@ -5,10 +5,10 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.example</groupId>
-  <artifactId>java-stream-02-toarray</artifactId>
+  <artifactId>java-stream-06-toarray</artifactId>
   <version>1.0-SNAPSHOT</version>
 
-  <name>java-stream-02-toarray</name>
+  <name>java-stream-06-toarray</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
