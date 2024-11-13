@@ -7,13 +7,13 @@ import org.junit.Test;
 public class MainTest {
 
     @Test
-    public void testToArrayExample() {
+    public void testFilterExample() {
 
-        // List<Message> messages = Main.getMessages();                                    // Given
+        List<Message> messages = Main.getMessages();                                    // Given
 
-        // Message[] results = Main.toArrayExample(messages);                              // When
+        List<Message> results = Main.filterExample(messages);                           // When
 
-        // assertEquals(4, results.length);                                       // Then
+        assertEquals(2, results.size());                                       // Then
 
     }
 
