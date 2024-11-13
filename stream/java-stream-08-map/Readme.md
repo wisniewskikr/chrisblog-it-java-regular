@@ -1,15 +1,15 @@
 ##### Goal
 
-In Java, the **stream().filter()** method is used to produce a new stream containing only the elements that match a specified condition (predicate). 
+In Java, **stream.map()** is an operation that transforms each element in a stream by applying a specified function and returns a new stream with the transformed elements. 
 
 ##### Functional Interface
 
-Predicate, boolean test(T)
+Function, R apply(T)
 
 ##### Result
 
-true/false
+R
 
 ##### Description
 
-Stream().filter() is like "WHERE" for databases.
+Stream.map() is like "SELECT {column}" for databases.
