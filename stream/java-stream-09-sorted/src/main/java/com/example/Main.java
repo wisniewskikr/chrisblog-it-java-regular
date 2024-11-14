@@ -12,8 +12,8 @@ public class Main {
 
         List<Message> messages = getMessages();
 
-        // List<Message> results = mapSortedAsc(messages);
-        List<Message> results = mapSortedDesc(messages);
+        List<Message> results = sortedAsc(messages);
+        // List<Message> results = sortedDesc(messages);
 
         results.forEach(System.out::println);
         
@@ -32,7 +32,7 @@ public class Main {
 
     }
 
-    public static List<Message> mapSortedAsc(List<Message> messages) {
+    public static List<Message> sortedAsc(List<Message> messages) {
 
         List<Message> results = messages.stream()
             .sorted(Comparator.comparingLong(Message::getId))
@@ -41,7 +41,7 @@ public class Main {
 
     }
 
-    public static List<Message> mapSortedDesc(List<Message> messages) {
+    public static List<Message> sortedDesc(List<Message> messages) {
 
         List<Message> results = messages.stream()
             .sorted(Comparator.comparingLong(Message::getId).reversed())
