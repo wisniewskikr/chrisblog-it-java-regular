@@ -1,6 +1,6 @@
 ##### Goal
 
-In Java, you can use the **Stream.min()** method to find the minimum element in a stream based on a specified comparator.
+In Java, **Stream.findFirst()** is a terminal operation that returns an Optional describing the first element of a stream, or an empty Optional if the stream is empty.
 
 ##### Functional Interface
 
@@ -12,4 +12,4 @@ N/A
 
 ##### Description
 
-Stream.min() is like "SELECT MIN(column)" for databases.
+Stream.findFirst() is like "SELECT" a first row for databases.
