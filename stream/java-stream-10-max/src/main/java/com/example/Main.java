@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
-import java.util.stream.Collectors;
+import java.util.Optional;
 
 public class Main {
     
@@ -12,10 +12,9 @@ public class Main {
 
         List<Message> messages = getMessages();
 
-        List<Message> results = sortedAsc(messages);
-        // List<Message> results = sortedDesc(messages);
+        Message result = maxExample(messages);
 
-        results.forEach(System.out::println);
+        System.out.println(result);
         
     }
 
@@ -32,21 +31,12 @@ public class Main {
 
     }
 
-    public static List<Message> sortedAsc(List<Message> messages) {
+    public static Message maxExample(List<Message> messages) {
 
-        List<Message> results = messages.stream()
-            .sorted(Comparator.comparingLong(Message::getId))
-            .collect(Collectors.toList());
-        return results;
+        Optional<Message> max = messages.stream()
+            .max(Comparator.comparingLong(Message::getId));
 
-    }
-
-    public static List<Message> sortedDesc(List<Message> messages) {
-
-        List<Message> results = messages.stream()
-            .sorted(Comparator.comparingLong(Message::getId).reversed())
-            .collect(Collectors.toList());
-        return results;
+        return max.orElseThrow(() -> new IllegalArgumentException("There is no max value"));
 
     }
 
