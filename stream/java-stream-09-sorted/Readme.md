@@ -1,15 +1,15 @@
 ##### Goal
 
-In Java, **stream.map()** is an operation that transforms each element in a stream by applying a specified function and returns a new stream with the transformed elements. 
+In Java, the **Stream.sorted()** method is used to sort elements in a stream. By default, it sorts in natural order if the elements are Comparable. Alternatively, a custom Comparator can be passed to define a specific sort order.
 
 ##### Functional Interface
 
-Function, R apply(T)
+N/A
 
 ##### Result
 
-R
+N/A
 
 ##### Description
 
-Stream.map() is like "SELECT {column}" for databases.
+Stream.sorted() is like "SORT" for databases.
