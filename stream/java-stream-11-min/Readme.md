@@ -1,6 +1,6 @@
 ##### Goal
 
-In Java, you can use the **Stream.max()** method to find the maximum element in a stream based on a specified comparator.
+In Java, you can use the **Stream.min()** method to find the minimum element in a stream based on a specified comparator.
 
 ##### Functional Interface
 
@@ -12,4 +12,4 @@ N/A
 
 ##### Description
 
-Stream.max() is like "SELECT MAX(column)" for databases.
+Stream.min() is like "SELECT MIN(column)" for databases.
