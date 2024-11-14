@@ -7,13 +7,13 @@ import org.junit.Test;
 public class MainTest {
 
     @Test
-    public void testSortedAscExample() {
+    public void testMaxExample() {
 
-        // List<Message> messages = Main.getMessages();                                    // Given
+        List<Message> messages = Main.getMessages();                      // Given
 
-        // List<Message> results = Main.sortedAsc(messages);                               // When
+        Message result = Main.maxExample(messages);                       // When
 
-        // assertEquals(Long.valueOf(1), results.get(0).getId());                  // Then
+        assertEquals(Long.valueOf(4), result.getId());                  // Then
 
     }
 
