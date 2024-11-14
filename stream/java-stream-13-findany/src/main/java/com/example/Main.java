@@ -2,7 +2,6 @@ package com.example;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
 
@@ -12,7 +11,7 @@ public class Main {
 
         List<Message> messages = getMessages();
 
-        Message result = findFirstExample(messages);
+        Message result = findAnyExample(messages);
 
         System.out.println(result);
         
@@ -31,10 +30,10 @@ public class Main {
 
     }
 
-    public static Message findFirstExample(List<Message> messages) {
+    public static Message findAnyExample(List<Message> messages) {
 
         Optional<Message> max = messages.stream()
-            .findFirst();
+            .findAny();
 
         return max.orElseThrow(() -> new IllegalArgumentException("There is no message"));
 

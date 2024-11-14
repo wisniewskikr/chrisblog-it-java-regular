@@ -11,7 +11,7 @@ public class MainTest {
 
         List<Message> messages = Main.getMessages();                      // Given
 
-        Message result = Main.findFirstExample(messages);                 // When
+        Message result = Main.findAnyExample(messages);                 // When
 
         assertEquals(Long.valueOf(1), result.getId());                  // Then
 
