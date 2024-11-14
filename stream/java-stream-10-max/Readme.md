@@ -1,6 +1,6 @@
 ##### Goal
 
-In Java, the **Stream.sorted()** method is used to sort elements in a stream. By default, it sorts in natural order if the elements are Comparable. Alternatively, a custom Comparator can be passed to define a specific sort order.
+In Java, you can use the **Stream.max()** method to find the maximum element in a stream based on a specified comparator.
 
 ##### Functional Interface
 
@@ -12,4 +12,4 @@ N/A
 
 ##### Description
 
-Stream.sorted() is like "SORT" for databases.
+Stream.max() is like "SELECT MAX(column)" for databases.
