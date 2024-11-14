@@ -1,19 +1,19 @@
 package com.example;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 import java.util.List;
 import org.junit.Test;
 
 public class MainTest {
 
     @Test
-    public void testFindFirstExample() {
+    public void testFindAnyExample() {
 
-        List<Message> messages = Main.getMessages();                      // Given
+        List<Message> messages = Main.getMessages();                     // Given
 
-        Message result = Main.findAnyExample(messages);                 // When
+        Message result = Main.findAnyExample(messages);                  // When
 
-        assertEquals(Long.valueOf(1), result.getId());                  // Then
+        assertNotNull(result);                                           // Then
 
     }
 
