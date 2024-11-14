@@ -12,7 +12,7 @@ public class Main {
 
         List<Message> messages = getMessages();
 
-        Message result = minExample(messages);
+        Message result = findFirstExample(messages);
 
         System.out.println(result);
         
@@ -31,12 +31,12 @@ public class Main {
 
     }
 
-    public static Message minExample(List<Message> messages) {
+    public static Message findFirstExample(List<Message> messages) {
 
         Optional<Message> max = messages.stream()
-            .min(Comparator.comparingLong(Message::getId));
+            .findFirst();
 
-        return max.orElseThrow(() -> new IllegalArgumentException("There is no max value"));
+        return max.orElseThrow(() -> new IllegalArgumentException("There is no message"));
 
     }
 
