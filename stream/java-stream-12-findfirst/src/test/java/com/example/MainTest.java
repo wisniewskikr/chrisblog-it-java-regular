@@ -7,13 +7,13 @@ import org.junit.Test;
 public class MainTest {
 
     @Test
-    public void testMinExample() {
+    public void testFindFirstExample() {
 
-        // List<Message> messages = Main.getMessages();                      // Given
+        List<Message> messages = Main.getMessages();                      // Given
 
-        // Message result = Main.minExample(messages);                       // When
+        Message result = Main.findFirstExample(messages);                 // When
 
-        // assertEquals(Long.valueOf(1), result.getId());                  // Then
+        assertEquals(Long.valueOf(1), result.getId());                  // Then
 
     }
 
