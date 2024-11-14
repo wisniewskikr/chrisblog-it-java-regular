@@ -2,6 +2,7 @@ package com.example;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -11,7 +12,8 @@ public class Main {
 
         List<Message> messages = getMessages();
 
-        List<String> results = mapExample(messages);
+        // List<Message> results = mapSortedAsc(messages);
+        List<Message> results = mapSortedDesc(messages);
 
         results.forEach(System.out::println);
         
@@ -30,10 +32,19 @@ public class Main {
 
     }
 
-    public static List<String> mapExample(List<Message> messages) {
+    public static List<Message> mapSortedAsc(List<Message> messages) {
 
-        List<String> results = messages.stream()
-            .map(m -> m.getText())
+        List<Message> results = messages.stream()
+            .sorted(Comparator.comparingLong(Message::getId))
+            .collect(Collectors.toList());
+        return results;
+
+    }
+
+    public static List<Message> mapSortedDesc(List<Message> messages) {
+
+        List<Message> results = messages.stream()
+            .sorted(Comparator.comparingLong(Message::getId).reversed())
             .collect(Collectors.toList());
         return results;
 
