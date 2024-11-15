@@ -1,6 +1,6 @@
 ##### Goal
 
-In Java, **Stream.findAny()** is a terminal operation that returns an Optional describing an any element of a stream, or an empty Optional if the stream is empty.
+In Java, **parallelStream()** is a method used on collections that creates a parallel stream for processing. A parallel stream enables parallel execution of tasks, dividing the workload across multiple threads in a fork-join pool, which can improve performance for large data sets. It's a way to leverage multicore processors for data processing with minimal coding effort.
 
 ##### Functional Interface
 
@@ -12,4 +12,4 @@ N/A
 
 ##### Description
 
-Stream.findAny() is like "SELECT" an any row for databases.
+N/A
