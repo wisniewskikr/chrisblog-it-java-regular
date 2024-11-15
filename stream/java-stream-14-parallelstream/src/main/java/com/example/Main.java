@@ -3,7 +3,6 @@ package com.example;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Optional;
 
 public class Main {
     
@@ -11,9 +10,7 @@ public class Main {
 
         List<Message> messages = getMessages();
 
-        Message result = findAnyExample(messages);
-
-        System.out.println(result);
+        parallelStreamExample(messages);
         
     }
 
@@ -30,12 +27,10 @@ public class Main {
 
     }
 
-    public static Message findAnyExample(List<Message> messages) {
+    public static void parallelStreamExample(List<Message> messages) {
 
-        Optional<Message> max = messages.stream()
-            .findAny();
-
-        return max.orElseThrow(() -> new IllegalArgumentException("There is no message"));
+        messages.parallelStream()
+            .forEach(m -> System.out.println("Thread name: " + Thread.currentThread().getName() + ", Message: " + m.toString()));
 
     }
 
