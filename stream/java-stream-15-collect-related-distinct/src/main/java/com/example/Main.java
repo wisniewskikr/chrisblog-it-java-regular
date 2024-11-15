@@ -11,7 +11,7 @@ public class Main {
 
         List<Message> messages = getMessages();
 
-        List<String> results = mapExample(messages);
+        List<String> results = distinctExample(messages);
 
         results.forEach(System.out::println);
         
@@ -30,10 +30,11 @@ public class Main {
 
     }
 
-    public static List<String> mapExample(List<Message> messages) {
+    public static List<String> distinctExample(List<Message> messages) {
 
         List<String> results = messages.stream()
-            .map(m -> m.getText())
+            .map(m -> m.getLanguage())
+            .distinct()
             .collect(Collectors.toList());
         return results;
 
