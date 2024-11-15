@@ -1,15 +1,15 @@
 ##### Goal
 
-In Java, **stream.map()** is an operation that transforms each element in a stream by applying a specified function and returns a new stream with the transformed elements. 
+In Java, the **distinct()** method of the Stream API is used to return a stream consisting of the distinct elements (removing duplicates) based on their natural equality (using Object.equals()).
 
 ##### Functional Interface
 
-Function, R apply(T)
+N/A
 
 ##### Result
 
-R
+Unique values
 
 ##### Description
 
-Stream.map() is like "SELECT {column}" for databases.
+Stream.distinct() is like "SELECT DISTINCT" for databases.
