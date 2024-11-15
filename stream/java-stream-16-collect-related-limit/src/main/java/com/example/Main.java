@@ -11,7 +11,7 @@ public class Main {
 
         List<Message> messages = getMessages();
 
-        List<Message> results = toListExample(messages);
+        List<Message> results = limitExample(messages);
 
         results.forEach(System.out::println);
         
@@ -30,9 +30,11 @@ public class Main {
 
     }
 
-    public static List<Message> toListExample(List<Message> messages) {
+    public static List<Message> limitExample(List<Message> messages) {
 
-        List<Message> results = messages.stream().collect(Collectors.toList());
+        List<Message> results = messages.stream()
+            .limit(3)
+            .collect(Collectors.toList());
         return results;
 
     }
