@@ -9,13 +9,13 @@ import org.junit.Test;
 public class MainTest {
 
     @Test
-    public void testLimitExample() {
+    public void testSkipExample() {
 
-        // List<Message> messages = Main.getMessages();                    // Given
+        List<Message> messages = Main.getMessages();                    // Given
 
-        // List<Message> results = Main.limitExample(messages);            // When
+        List<Message> results = Main.skipExample(messages);             // When
 
-        // assertEquals(3, results.size());                       // Then
+        assertEquals(3, results.size());                       // Then
 
     }
 
