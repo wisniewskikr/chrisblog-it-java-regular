@@ -7,13 +7,13 @@ import org.junit.Test;
 public class MainTest {
 
     @Test
-    public void testFilterExample() {
+    public void testAnyMatchExample() {
 
-        // List<Message> messages = Main.getMessages();                                    // Given
+        List<Message> messages = Main.getMessages();                                // Given
 
-        // List<Message> results = Main.filterExample(messages);                           // When
+        boolean result = Main.anyMatchExample(messages);                           // When
 
-        // assertEquals(2, results.size());                                       // Then
+        assertEquals(true, result);                                       // Then
 
     }
 
