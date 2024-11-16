@@ -7,13 +7,13 @@ import org.junit.Test;
 public class MainTest {
 
     @Test
-    public void testFilterExample() {
+    public void testFlatMapExample() {
 
-        // List<Message> messages = Main.getMessages();                                    // Given
+        List<Message> messages = Main.getMessages();                                    // Given
 
-        // List<String> results = Main.mapExample(messages);                               // When
+        List<String> results = Main.flatMapExample(messages);                           // When
 
-        // assertEquals(4, results.size());                                       // Then
+        assertEquals(8, results.size());                                       // Then
 
     }
 
