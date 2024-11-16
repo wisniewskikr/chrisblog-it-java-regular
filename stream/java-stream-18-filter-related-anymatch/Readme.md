@@ -1,6 +1,6 @@
 ##### Goal
 
-In Java, the **stream().filter()** method is used to produce a new stream containing only the elements that match a specified condition (predicate). 
+In Java, the **anyMatch()** method is a terminal operation of the Streams API. It checks whether any element in the stream matches a given predicate. If at least one element satisfies the condition, it returns true; otherwise, it returns false
 
 ##### Functional Interface
 
@@ -12,4 +12,4 @@ true/false
 
 ##### Description
 
-Stream().filter() is like "WHERE" for databases.
+Stream.anyMatch() is like "WHERE ... ANY ..." for databases.
