@@ -7,13 +7,13 @@ import org.junit.Test;
 public class MainTest {
 
     @Test
-    public void testAllMatchExample() {
+    public void testNoneMatchExample() {
 
-        // List<Message> messages = Main.getMessages();                               // Given
+        List<Message> messages = Main.getMessages();                               // Given
 
-        // boolean result = Main.allMatchExample(messages);                           // When
+        boolean result = Main.noneMatchExample(messages);                           // When
 
-        // assertEquals(false, result);                                       // Then
+        assertEquals(false, result);                                       // Then
 
     }
 
