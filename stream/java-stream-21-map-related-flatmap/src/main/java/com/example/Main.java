@@ -11,7 +11,7 @@ public class Main {
 
         List<Message> messages = getMessages();
 
-        List<String> results = mapExample(messages);
+        List<String> results = flatMapExample(messages);
 
         results.forEach(System.out::println);
         
@@ -30,10 +30,11 @@ public class Main {
 
     }
 
-    public static List<String> mapExample(List<Message> messages) {
+    public static List<String> flatMapExample(List<Message> messages) {
 
         List<String> results = messages.stream()
-            .map(m -> m.getText())
+            .flatMap(m -> m.getUsers().stream())
+            .map(u -> u.getName())
             .collect(Collectors.toList());
         return results;
 
