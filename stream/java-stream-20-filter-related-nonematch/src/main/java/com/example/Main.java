@@ -10,7 +10,7 @@ public class Main {
 
         List<Message> messages = getMessages();
 
-        boolean result = allMatchExample(messages);
+        boolean result = noneMatchExample(messages);
 
         System.out.println(result);
         
@@ -29,10 +29,10 @@ public class Main {
 
     }
 
-    public static boolean allMatchExample(List<Message> messages) {
+    public static boolean noneMatchExample(List<Message> messages) {
 
         boolean result = messages.stream()
-            .allMatch(m -> "EN".equals(m.getLanguage()));
+            .noneMatch(m -> "EN".equals(m.getLanguage()));
         return result;
 
     }
