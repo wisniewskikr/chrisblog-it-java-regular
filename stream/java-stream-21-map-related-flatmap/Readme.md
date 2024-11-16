@@ -1,6 +1,6 @@
 ##### Goal
 
-In Java, **stream.map()** is an operation that transforms each element in a stream by applying a specified function and returns a new stream with the transformed elements. 
+In Java, **flatMap** is a method in the Streams API used to transform each element of a stream into another stream and then flatten those streams into a single stream. It is often used when dealing with nested data structures like lists of lists.
 
 ##### Functional Interface
 
@@ -12,4 +12,4 @@ R
 
 ##### Description
 
-Stream.map() is like "SELECT {column}" for databases.
+Stream.flatMap() is like "SELECT {column} JOIN .. ON .." for databases.
