@@ -10,7 +10,7 @@ public class Main {
 
         List<Message> messages = getMessages();
 
-        boolean result = anyMatchExample(messages);
+        boolean result = allMatchExample(messages);
 
         System.out.println(result);
         
@@ -29,10 +29,10 @@ public class Main {
 
     }
 
-    public static boolean anyMatchExample(List<Message> messages) {
+    public static boolean allMatchExample(List<Message> messages) {
 
         boolean result = messages.stream()
-            .anyMatch(m -> "EN".equals(m.getLanguage()));
+            .allMatch(m -> "EN".equals(m.getLanguage()));
         return result;
 
     }
