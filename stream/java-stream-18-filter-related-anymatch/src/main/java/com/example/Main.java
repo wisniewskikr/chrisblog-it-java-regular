@@ -3,7 +3,6 @@ package com.example;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class Main {
     
@@ -11,9 +10,9 @@ public class Main {
 
         List<Message> messages = getMessages();
 
-        List<Message> results = filterExample(messages);
+        boolean result = anyMatchExample(messages);
 
-        results.forEach(System.out::println);
+        System.out.println(result);
         
     }
 
@@ -30,12 +29,11 @@ public class Main {
 
     }
 
-    public static List<Message> filterExample(List<Message> messages) {
+    public static boolean anyMatchExample(List<Message> messages) {
 
-        List<Message> results = messages.stream()
-            .filter(m -> "EN".equals(m.getLanguage()))
-            .collect(Collectors.toList());
-        return results;
+        boolean result = messages.stream()
+            .anyMatch(m -> "EN".equals(m.getLanguage()));
+        return result;
 
     }
 
