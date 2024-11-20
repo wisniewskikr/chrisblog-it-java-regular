@@ -4,13 +4,17 @@ public class Main {
     
     public static void main( String[] args ) throws InterruptedException {
 
+        // START SECTION
         System.out.println("Project start in the Thread: " + Thread.currentThread().getName());
         long start = System.currentTimeMillis();
+
 
         Main main = new Main();
         String message = main.getMessage();
         System.out.println("Message: " + message);
 
+        
+        // END SECTION
         long end = System.currentTimeMillis();
         System.out.println("Project end in the Thread: " + 
             Thread.currentThread().getName() + 
