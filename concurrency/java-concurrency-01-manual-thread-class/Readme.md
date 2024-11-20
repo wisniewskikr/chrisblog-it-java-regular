@@ -1,15 +1,3 @@
 ##### Goal
 
-In Java, **Stream.forEach()** is a terminal operation used to iterate over each element in a stream, applying a specified action (like printing or modifying) to each element. It’s often used in functional programming contexts to process elements without modifying the original collection directly.
-
-##### Predicate
-
-Consumer; void accept(T)
-
-##### Result
-
-Void
-
-##### Description
-
-Stream.forEach() is like "SELECT *" for databases.
+In Java, a thread can be created by extending the Thread class. This involves defining a class that inherits from Thread and overriding its run() method with the code you want to execute concurrently. Once an instance of this class is created, you start the thread by calling its start() method, which internally calls the overridden run() method.
