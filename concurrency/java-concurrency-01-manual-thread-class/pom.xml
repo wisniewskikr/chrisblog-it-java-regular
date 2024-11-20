@@ -5,10 +5,10 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.example</groupId>
-  <artifactId>java-concurrency-01-manual-thread-abstractmethod</artifactId>
+  <artifactId>java-concurrency-01-manual-thread-class</artifactId>
   <version>1.0-SNAPSHOT</version>
 
-  <name>java-concurrency-01-manual-thread-abstractmethod</name>
+  <name>java-concurrency-01-manual-thread-class</name>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
