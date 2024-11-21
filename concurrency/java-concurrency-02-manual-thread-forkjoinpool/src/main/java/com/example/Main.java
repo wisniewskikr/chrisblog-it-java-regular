@@ -1,5 +1,7 @@
 package com.example;
 
+import java.util.concurrent.ForkJoinPool;
+
 public class Main {
     
     public static void main( String[] args ) throws InterruptedException {
@@ -26,9 +28,10 @@ public class Main {
         public String getMessage() throws InterruptedException {
             
             String[] parts = new String[2];
+            ForkJoinPool fjp = new ForkJoinPool(2);
 
-            Thread textThread = new TextThread(parts);
-            Thread userThread = new UserThread(parts);
+            Thread textThread = getTextThread(parts, fjp);
+            Thread userThread = getUserThread(parts, fjp);
 
             textThread.start();
             userThread.start();
@@ -40,53 +43,38 @@ public class Main {
 
         }
 
-        class TextThread extends Thread {
+        public Thread getTextThread(String[] parts, ForkJoinPool fjp) {
 
-            String[] parts;                
+            return new Thread(() -> fjp.submit(() -> {
 
-            public TextThread(String[] parts) {
-                this.parts = parts;
-            }
-
-            @Override
-            public void run() {
-                
                 try {
                     System.out.println("Text is processing by the Thread: " + Thread.currentThread().getName());
                     Thread.sleep(3000);
                     parts[0] = "Hello World";
-                System.out.println("Text was processed by the Thread: " + Thread.currentThread().getName());
+                    System.out.println("Text was processed by the Thread: " + Thread.currentThread().getName());
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
 
-            }
+            }).invoke());
 
         }
 
-        class UserThread extends Thread {
+        public Thread getUserThread(String[] parts, ForkJoinPool fjp) {
 
-            String[] parts;                
+            return new Thread(() -> fjp.submit(() -> {
 
-            public UserThread(String[] parts) {
-                this.parts = parts;
-            }
-
-            @Override
-            public void run() {
-                
                 try {
                     System.out.println("User is processing by the Thread: " + Thread.currentThread().getName());
                     Thread.sleep(1000);
                     parts[1] = "Stranger";
-                System.out.println("User was processed by the Thread: " + Thread.currentThread().getName());
+                    System.out.println("User was processed by the Thread: " + Thread.currentThread().getName());
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
 
-            }
+            }).invoke());
 
         }
-
 
 }
