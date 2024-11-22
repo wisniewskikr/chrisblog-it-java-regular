@@ -1,6 +1,9 @@
 ##### Goal
 
-The goal of this project is to present how to create **concurrency** in **Java** programming language using **manually created** class **Thread**.
+The goal of this project is to present how to create **concurrency** in **Java** programming language using **manually created** interface **Runnable**. Interface Runnable has to be used as constructor argument in class Thread. Interface Runnable can be created in 3 ways:
+* **Classic**: create class which implements Runnable interface. Then use this class in class Thread
+* **Abstract Method**: use interface Runnable directly in class Thread
+* **Lambda**: use lambda directly in class Thread
 
 In this example we expect message: **Hello World, Stranger**. This message is combination of results of two separate cuncurrent threads:
 * **Text Thread**: this thread is delayed for 3 seconds and returns text "Hello World"

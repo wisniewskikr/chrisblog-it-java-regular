@@ -162,7 +162,7 @@ public class Main {
                     System.out.println("Text is processing by the Thread: " + Thread.currentThread().getName());
                     Thread.sleep(3000);
                     parts[0] = "Hello World";
-                System.out.println("Text was processed by the Thread: " + Thread.currentThread().getName());
+                    System.out.println("Text was processed by the Thread: " + Thread.currentThread().getName());
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
@@ -186,7 +186,7 @@ public class Main {
                     System.out.println("User is processing by the Thread: " + Thread.currentThread().getName());
                     Thread.sleep(1000);
                     parts[1] = "Stranger";
-                System.out.println("User was processed by the Thread: " + Thread.currentThread().getName());
+                    System.out.println("User was processed by the Thread: " + Thread.currentThread().getName());
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
