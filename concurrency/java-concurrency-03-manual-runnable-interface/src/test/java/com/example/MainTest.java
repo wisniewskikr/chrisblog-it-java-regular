@@ -6,11 +6,11 @@ import org.junit.Test;
 public class MainTest {
 
     @Test
-    public void getMessageTest() throws InterruptedException {
+    public void getMessageRunnableClassicTest() throws InterruptedException {
 
         Main main = new Main();                                     // Given
         
-        String message = main.getMessage();                         // When
+        String message = main.getMessageRunnableClassic();          // When
 
         assertEquals("Hello World, Stranger", message);    // Then
 

@@ -10,7 +10,7 @@ public class Main {
 
 
         Main main = new Main();
-        String message = main.getMessage();
+        String message = main.getMessageRunnableClassic();
         System.out.println("Message: " + message);
 
         
@@ -23,12 +23,12 @@ public class Main {
             
         }
     
-        public String getMessage() throws InterruptedException {
+        public String getMessageRunnableClassic() throws InterruptedException {
             
             String[] parts = new String[2];
 
-            Thread textThread = new TextThread(parts);
-            Thread userThread = new UserThread(parts);
+            Thread textThread = new Thread(new TextRunnable(parts));
+            Thread userThread = new Thread(new UserRunnable(parts));
 
             textThread.start();
             userThread.start();
@@ -40,11 +40,11 @@ public class Main {
 
         }
 
-        class TextThread extends Thread {
+        class TextRunnable implements Runnable {
 
             String[] parts;                
 
-            public TextThread(String[] parts) {
+            public TextRunnable(String[] parts) {
                 this.parts = parts;
             }
 
@@ -64,11 +64,11 @@ public class Main {
 
         }
 
-        class UserThread extends Thread {
+        class UserRunnable implements Runnable {
 
             String[] parts;                
 
-            public UserThread(String[] parts) {
+            public UserRunnable(String[] parts) {
                 this.parts = parts;
             }
 
