@@ -16,4 +16,15 @@ public class MainTest {
 
     }
 
+    @Test
+    public void getMessageRunnableAbstractMethodTest() throws InterruptedException {
+
+        Main main = new Main();                                     // Given
+        
+        String message = main.getMessageRunnableAbstractMethod();   // When
+
+        assertEquals("Hello World, Stranger", message);    // Then
+
+    }
+
 }
