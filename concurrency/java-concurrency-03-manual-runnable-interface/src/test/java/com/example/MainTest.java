@@ -27,4 +27,15 @@ public class MainTest {
 
     }
 
+    @Test
+    public void getMessageRunnableLambdaTest() throws InterruptedException {
+
+        Main main = new Main();                                     // Given
+        
+        String message = main.getMessageRunnableLambda();           // When
+
+        assertEquals("Hello World, Stranger", message);    // Then
+
+    }
+
 }

@@ -10,10 +10,16 @@ public class Main {
 
 
         Main main = new Main();
+
         // Classic
         // String message = main.getMessageRunnableClassic();
+
         // Abstract Method
-        String message = main.getMessageRunnableAbstractMethod();
+        // String message = main.getMessageRunnableAbstractMethod();
+
+        // Lambda
+        String message = main.getMessageRunnableLambda();
+
         System.out.println("Message: " + message);
 
         
@@ -41,7 +47,7 @@ public class Main {
 
             return parts[0] + ", " + parts[1];
 
-        }
+        }        
 
         public String getMessageRunnableAbstractMethod() throws InterruptedException {
             
@@ -82,6 +88,54 @@ public class Main {
                 }
 
             });
+
+            textThread.start();
+            userThread.start();
+
+            textThread.join();
+            userThread.join();
+
+            return parts[0] + ", " + parts[1];
+
+        }
+
+        public String getMessageRunnableLambda() throws InterruptedException {
+            
+            String[] parts = new String[2];
+
+            Thread textThread = new Thread(() -> 
+            
+                {
+                    
+                    try {
+                        System.out.println("Text is processing by the Thread: " + Thread.currentThread().getName());
+                        Thread.sleep(3000);
+                        parts[0] = "Hello World";
+                        System.out.println("Text was processed by the Thread: " + Thread.currentThread().getName());
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+
+                }
+
+            );
+
+            Thread userThread = new Thread(() -> 
+            
+                {
+                    
+                    try {
+                        System.out.println("User is processing by the Thread: " + Thread.currentThread().getName());
+                        Thread.sleep(1000);
+                        parts[1] = "Stranger";
+                        System.out.println("User was processed by the Thread: " + Thread.currentThread().getName());
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+
+                }
+
+            );
 
             textThread.start();
             userThread.start();
